@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dhan-Vruksha</title>
+    <meta property="og:title" content="Handy Scarce Turtle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="shortcut icon" type="image/x-icon" href="./pictures/logo.png">
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background-color: var(--dl-color-theme-accent1);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <header class="navbar4-container">
+          <header data-thq="thq-navbar" class="navbar4-navbar-interactive">
+            <img
+              alt="Financial Institute Logo"
+              src="./pictures/logo.png"
+              class="navbar4-image1"
+            />
+            <div data-thq="thq-navbar-nav" class="navbar4-desktop-menu">
+              <nav class="navbar4-links">
+                <span class="thq-body-small thq-link"><span>Home</span></span>
+                <a href="http://127.0.0.1:5000">
+                <span class="thq-body-small thq-link">
+                  <span>Translator</span>
+                </span></a>
+                <a href="./community.html"><span class="thq-body-small thq-link">
+                  <span>Community</span>
+                </span></a>
+                <a href="./assistant.html"><span class="thq-body-small thq-link">
+                  <span>Assistant</span>
+                </span></a>
+                <span class="thq-body-small thq-link" href="#contact">
+                  <span>Contact</span>
+                </span>
+              </nav>
+              <div class="navbar4-buttons">
+           <div class="navbar4-buttons">
+  <!-- Sign In Dropdown -->
+  <div class="navbar4-dropdown">
+    <a href="./signin.html" class="navbar4-action1 thq-button-animated thq-button-filled">
+      <span class="thq-body-small">Sign In</span>
+    </a>
+    <div class="navbar4-dropdown-content">
+      <a href="./signin.html?type=user">User</a>
+      <a href="./signin.html?type=institute">Institute</a>
+    </div>
+  </div>
+
+  <!-- Sign Up Dropdown -->
+  <div class="navbar4-dropdown">
+    <a href="./signin.html" class="navbar4-action2 thq-button-animated thq-button-outline">
+      <span class="thq-body-small">Sign up</span>
+    </a>
+    <div class="navbar4-dropdown-content">
+      <a href="./signin.html?type=user">User</a>
+      <a href="./signin.html?type=institute">Institute</a>
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div data-thq="thq-burger-menu" class="navbar4-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="navbar4-icon">
+                <path
+                  d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+            <div data-thq="thq-mobile-menu" class="navbar4-mobile-menu">
+              <div class="navbar4-nav">
+                <div class="navbar4-top">
+                  <img
+                    alt="Financial Institute Logo"
+                    src="./pictures/logo.png"
+                    class="navbar4-logo"
+                  />
+                  <div data-thq="thq-close-menu" class="navbar4-close-menu">
+                    <svg viewBox="0 0 1024 1024" class="navbar4-icon2">
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <nav class="navbar4-links1">
+                  <span class="thq-body-small thq-link"><span>Home</span></span>
+                  <span class="thq-body-small thq-link">
+                    <span>Translator</span>
+                  </span>
+                  <span class="thq-body-small thq-link">
+                    <span>Community</span>
+                  </span>
+                  <span class="thq-body-small thq-link">
+                    <span>Assistant</span>
+                  </span>
+                  <span class="thq-body-small thq-link">
+                    <span>Contact</span>
+                  </span>
+                </nav>
+              </div>
+              <div class="navbar4-buttons1">
+                <!-- Login Dropdown -->
+                <div class="dropdown">
+                    <label for="loginDropdown">Login:</label>
+                    <select id="loginDropdown" class="thq-button-filled dropdown-toggle">
+                        <option selected disabled>Select</option>
+                        <option value="signin.html?type=user">User</option>
+                        <option value="signin.html?type=institute">Institute</option>
+                    </select>
+                </div>
+            
+                <!-- Register Dropdown -->
+                <div class="dropdown">
+                    <label for="registerDropdown">Register:</label>
+                    <select id="registerDropdown" class="thq-button-outline dropdown-toggle">
+                        <option selected disabled>Select</option>
+                        <option value="signup.html?type=user">User</option>
+                        <option value="signup.html?type=institute">Institute</option>
+                    </select>
+                </div>
+            </div>
+            
+              
+          </header>
+        </header>
+        <div class="hero9-header30 thq-section-padding">
+          <img
+            alt="Financial Language Bridge Image"
+            src="https://images.unsplash.com/photo-1476242906366-d8eb64c2f661?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcxODUwMzgzNnw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+            class="hero9-image"
+          />
+          <div class="hero9-container"></div>
+          <div class="hero9-max-width thq-section-max-width">
+            <div class="hero9-content">
+              <h1 class="hero9-text thq-heading-1">
+                <span>Welcome to Dhan-Vruksha</span>
+              </h1>
+              <p class="hero9-text1 thq-body-large">
+                <span>
+                  Break the language barrier in financial transactions with ease
+                </span>
+              </p>
+              <div class="hero9-actions">
+                <button class="thq-button-filled hero9-button">
+                  <span class="hero9-text2 thq-body-small">
+                    <span>Learn More</span>
+                  </span>
+                </button>
+                <button class="thq-button-outline hero9-button1">
+                  <span class="hero9-text3 thq-body-small">
+                    <span>Get Started</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="features1-layout251 thq-section-padding">
+          <div class="features1-max-width thq-section-max-width">
+            <div class="thq-flex-row features1-section-title">
+              <div class="features1-column thq-flex-column">
+                <h2 class="thq-heading-2 features1-text">
+                  <span>Features</span>
+                </h2>
+              </div>
+            </div>
+            <div class="features1-content">
+              <div class="features1-row thq-flex-row">
+                <div class="features1-feature1 thq-flex-column">
+                  <img
+                    alt="image"
+                    src="public/openart-image_u487p4iz_1718512500336_raw-500w.jpg"
+                    class="features1-image"
+                  />
+                  <div class="features1-content1 thq-flex-column">
+                    <h3 class="thq-heading-3">
+                      <span>Document Translation</span>
+                    </h3>
+                    <span class="thq-body-small">
+                      <span>
+                        Effortlessly translate documents to your mother tongue
+                        for better understanding and communication with
+                        financial institutes.
+                      </span>
+                    </span>
+                    <button type="button" class="button">
+                      <a href="http://127.0.0.1:5000"><span>Translate Document</span></a>
+                    </button>
+                  </div>
+                </div>
+                <div class="features1-feature2 thq-flex-column">
+                  <div class="features1-container">
+                    <img
+                      alt="image"
+                      src="public/openart-image_q8vj2lab_1718512874787_raw-500w.jpg"
+                      class="features1-image1"
+                    />
+                  </div>
+                  <div class="features1-content2 thq-flex-column">
+                    <h3 class="thq-heading-3">
+                      <a href="./community.html"><span>Podcast and Community</span></a>
+                    </h3>
+                    <span class="thq-body-small">
+                      <span>
+                        Join our community of like-minded individuals to share
+                        experiences, insights, and tips on personal finance.
+                      </span>
+                    </span>
+                    <button type="button" class="button">
+                     <a href="./community.html"><span>Join Community</span></a> 
+                    </button>
+                  </div>
+                </div>
+                <div class="features1-feature3 thq-flex-column">
+                  <img
+                    alt="image"
+                    src="public/openart-image_pgprprv5_1718513104407_raw-500w.jpg"
+                    class="features1-image2"
+                  />
+                  <div class="features1-content3 thq-flex-column">
+                    <h3 class="thq-heading-3"><span>Assistant</span></h3>
+                    <span class="thq-body-small">
+                      <span>
+                        AI and Human Finance Experts to assist you throughout
+                        and help you to share strategies for secure and improved
+                        investment.
+                      </span>
+                    </span>
+                    <a href="./assistant.html"><button type="button" class="button">
+                      <span>Assistant</span>
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="features1-container1">
+              <div class="features1-actions"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="banner11-container thq-section-padding banner11-root-class-name"
+        >
+          <div class="banner11-max-width thq-section-max-width">
+            <div class="banner11-container1">
+              <h2 class="banner11-title thq-heading-2">
+                <span>Translate Finance Seamlessly</span>
+              </h2>
+              <h3 class="banner11-text thq-heading-3">
+                <span>Try Our App Now</span>
+              </h3>
+            </div>
+          </div>
+          <div class="banner11-ios-btn">
+            <img
+              alt="pastedImage"
+              src="public/external/pastedimage-zmzg.svg"
+              class="banner11-apple"
+            />
+            <span class="banner11-caption">Download for iOS</span>
+          </div>
+          <div class="banner11-android-btn">
+            <img
+              alt="pastedImage"
+              src="public/external/pastedimage-ld65.svg"
+              class="banner11-android"
+            />
+            <span class="banner11-caption1">Download for Android</span>
+          </div>
+        </div>
+        <div class="contact3-contact20 thq-section-padding" >
+          <div class="contact3-max-width thq-section-max-width">
+            <div class="contact3-section-title">
+              <h2 class="thq-heading-2"><span>Contact Us</span></h2>
+              <span class="thq-body-small">
+                <span>
+                  Our team is here to help you with any questions you may have.
+                </span>
+              </span>
+              <div class="contact3-content">
+                <p class="contact3-text2 thq-body-large">
+                  <span>
+                    Feel free to reach out to us for any inquiries or
+                    assistance.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="contact3-row">
+              <div class="contact3-content1">
+                <svg viewBox="0 0 1024 1024" class="thq-icon-medium">
+                  <path
+                    d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"
+                  ></path>
+                </svg>
+                <div class="contact3-contact-info">
+                  <div class="contact3-content2">
+                    <h3 class="contact3-text3 thq-heading-3">Email</h3>
+                    <p class="contact3-text4 thq-body-large">
+                      <span>
+                        Feel free to send your query and feedback by Mail also.
+                      </span>
+                    </p>
+                  </div>
+                  <span class="contact3-email thq-body-small">
+                    <span>niveshsuraksha.com</span>
+                  </span>
+                </div>
+              </div>
+              <div class="contact3-content3">
+                <svg viewBox="0 0 1024 1024" class="thq-icon-medium">
+                  <path
+                    d="M282 460q96 186 282 282l94-94q20-20 44-10 72 24 152 24 18 0 30 12t12 30v150q0 18-12 30t-30 12q-300 0-513-213t-213-513q0-18 12-30t30-12h150q18 0 30 12t12 30q0 80 24 152 8 26-10 44z"
+                  ></path>
+                </svg>
+                <div class="contact3-contact-info1">
+                  <div class="contact3-content4">
+                    <h3 class="contact3-text5 thq-heading-3">Phone</h3>
+                    <p class="contact3-text6 thq-body-large">
+                      <span>
+                        We value your feedback and are constantly striving to
+                        improve our services.
+                      </span>
+                    </p>
+                  </div>
+                  <span class="contact3-phone thq-body-small">
+                    <span>+123-456-7890</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer1-footer1 thq-section-padding">
+          <div class="footer1-max-width thq-section-max-width">
+            <div class="footer1-content">
+              <div class="footer1-newsletter">
+                <img
+                  alt="Financial Institute Logo"
+                  src="./Untitled design (2).png"
+                  loading="eager"
+                  class="footer1-image1"
+                />
+                <span class="thq-body-small">
+                  Subscribe to our newsletter for the latest updates on new
+                  features and podcast releases.
+                </span>
+                <div class="footer1-actions">
+                  <div class="footer1-form">
+                    <div class="footer1-container">
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="footer1-text-input thq-input"
+                      />
+                    </div>
+                    <button class="thq-button-outline footer1-button">
+                      <span class="thq-body-small">
+                        <span>Subscribe to Newsletter</span>
+                      </span>
+                    </button>
+                  </div>
+                  <span class="footer1-content2 thq-body-small">
+                    <span>Connect with us on social media</span>
+                  </span>
+                </div>
+              </div>
+              <div class="footer1-links">
+                <div class="footer1-column1">
+                  <strong class="thq-body-large footer1-column1-title">
+                    <span>Company</span>
+                  </strong>
+                  <div class="footer1-footer-links">
+                    <span class="thq-body-small"><span>About Us</span></span>
+                    <span class="thq-body-small"><span>Contact Us</span></span>
+                    <span class="thq-body-small"><span>FAQs</span></span>
+                    <span class="thq-body-small"><span>Blog</span></span>
+                    <span class="thq-body-small"><span>Podcast</span></span>
+                  </div>
+                </div>
+                <div class="footer1-column2">
+                  <strong class="thq-body-large footer1-column2-title">
+                    <span>Resources</span>
+                  </strong>
+                  <div class="footer1-footer-links1">
+                    <span class="thq-body-small"><span>Community</span></span>
+                    <span class="thq-body-small">
+                      <span>Terms of Use</span>
+                    </span>
+                    <span class="thq-body-small">
+                      <span>Privacy Policy</span>
+                    </span>
+                    <span class="thq-body-small">
+                      <span>Cookies Policy</span>
+                    </span>
+                    <span class="thq-body-small"><span>Sign Up</span></span>
+                  </div>
+                </div>
+                <div class="footer1-column3">
+                  <strong class="thq-body-large footer1-social-link1-title">
+                    <span>Follow Us</span>
+                  </strong>
+                  <div class="footer1-social-links">
+                    <div class="footer1-link">
+                      <svg
+                        viewBox="0 0 877.7142857142857 1024"
+                        class="thq-icon-small"
+                      >
+                        <path
+                          d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"
+                        ></path>
+                      </svg>
+                      <span class="thq-body-small">Facebook</span>
+                    </div>
+                    <div class="footer1-link1">
+                      <svg
+                        viewBox="0 0 877.7142857142857 1024"
+                        class="thq-icon-small"
+                      >
+                        <path
+                          d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                        ></path>
+                      </svg>
+                      <span class="thq-body-small">Instagram</span>
+                    </div>
+                    <div class="footer1-link2">
+                      <svg
+                        viewBox="0 0 950.8571428571428 1024"
+                        class="thq-icon-small"
+                      >
+                        <path
+                          d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                        ></path>
+                      </svg>
+                      <span class="thq-body-small">X</span>
+                    </div>
+                    <div class="footer1-link3">
+                      <svg
+                        viewBox="0 0 877.7142857142857 1024"
+                        class="thq-icon-small"
+                      >
+                        <path
+                          d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                        ></path>
+                      </svg>
+                      <span class="thq-body-small">LinkedIn</span>
+                    </div>
+                    <div class="footer1-link4">
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M406.286 644.571l276.571-142.857-276.571-144.571v287.429zM512 152c215.429 0 358.286 10.286 358.286 10.286 20 2.286 64 2.286 102.857 43.429 0 0 31.429 30.857 40.571 101.714 10.857 82.857 10.286 165.714 10.286 165.714v77.714s0.571 82.857-10.286 165.714c-9.143 70.286-40.571 101.714-40.571 101.714-38.857 40.571-82.857 40.571-102.857 42.857 0 0-142.857 10.857-358.286 10.857v0c-266.286-2.286-348-10.286-348-10.286-22.857-4-74.286-2.857-113.143-43.429 0 0-31.429-31.429-40.571-101.714-10.857-82.857-10.286-165.714-10.286-165.714v-77.714s-0.571-82.857 10.286-165.714c9.143-70.857 40.571-101.714 40.571-101.714 38.857-41.143 82.857-41.143 102.857-43.429 0 0 142.857-10.286 358.286-10.286v0z"
+                        ></path>
+                      </svg>
+                      <span class="thq-body-small">Youtube</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer1-credits">
+              <div class="thq-divider-horizontal"></div>
+              <div class="footer1-row">
+                <span class="thq-body-small">
+                  <span>All rights reserved.</span>
+                </span>
+                <div class="footer1-footer-links2">
+                  <span class="thq-body-small"><span>/privacy</span></span>
+                  <span class="thq-body-small"><span>/terms</span></span>
+                  <span class="thq-body-small"><span>/cookies</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>

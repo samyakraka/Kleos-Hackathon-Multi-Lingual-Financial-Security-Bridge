@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Advisor Registration</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .chatbot-section {
+    display: flex;
+    height: 100vh;
+}
+
+.chatbot-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chatbot-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbot-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chatbot-button-container {
+    text-align: center;
+}
+
+.chatbot-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.chatbot-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #6c757d;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .advisor-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .advisor {
+            width: 300px;
+            height: 500px; /* Fixed height for consistency */
+            margin: 0 15px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .advisor img {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .advisor img:hover {
+            transform: scale(1.05);
+        }
+        .advisor h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .advisor p {
+            color: #6c757d;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 5px;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+        .separator {
+            border-top: 2px solid #ddd;
+            margin: 50px 0;
+        }
+        .why-choose-us {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .cta-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .client-testimonials {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .testimonial {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            width: 250px;
+            vertical-align: top;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .stars {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .registration-section {
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 50px;
+        }
+        .registration-section .title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .registration-section .subtitle {
+            margin-bottom: 30px;
+            color: #6c757d;
+        }
+        .registration-section .icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .registration-section .icon {
+            text-align: center;
+            margin: 0 15px;
+            width: 150px;
+        }
+        .registration-section .icon img {
+            width: 80px;
+            height: 80px;
+        }
+        .registration-section .icon p {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        .registration-section .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .registration-section .buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .registration-section .buttons .signin {
+            background-color: #007bff;
+            color: white;
+        }
+        .registration-section .buttons .signin:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .registration-section .buttons .signup {
+            background-color: #ffffff;
+            border: 1px solid #007bff;
+            color: #007bff;
+        }
+        .registration-section .buttons .signup:hover {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+        .why-choose-us {
+            width: 100%;
+            height: 100%;
+        }
+        .chatbot-section {
+            display: flex;
+            height: 100vh;
+        }
+        .chatbot-image {
+            flex: 1;
+            background: url('./chatbot-image.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .chatbot-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chatbot-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .chatbot-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-title">Meet Our Financial Advisors</div>
+        <div class="section-subtitle">Get personalized financial advice tailored to your unique situation.</div>
+        <div class="advisor-carousel">
+            <div class="advisor">
+                <img src="./pictures/men.jpg" alt="John Doe">
+                <h3>John Doe</h3>
+                <p>Certified Financial Planner</p>
+                <p>Certified Financial Planner with over 10 years of experience in wealth management.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="advisor">
+                <img src="./pictures/women.jpg" alt="Sarah Lee">
+                <h3>Sarah Lee</h3>
+                <p>Tax Planning Expert</p>
+                <p>Tax planning expert with a focus on maximizing tax efficiency for clients.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <p>Our team of financial advisors is dedicated to helping you achieve your financial goals. Register now to schedule a consultation with one of our experienced financial advisors.</p>
+            <button class="cta-button">Schedule a Consultation</button>
+        </div>
+        <div class="separator"></div>
+        <div class="client-testimonials">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>I have been working with the financial advisors on this platform for over a year now, and I must say they have truly transformed my approach to financial planning. Their personalized advice has helped me secure my retirement and grow my wealth steadily.</p>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★☆</div>
+                <p>As a young professional starting my career, I needed guidance on setting up a solid financial foundation. The advisors here have been incredibly helpful, providing me with clear and actionable advice.</p>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="registration-section">
+            <div class="title">Are you a Financial Advisor?</div>
+            <div class="subtitle">Register Yourself on our website and Assist People</div>
+            <div class="icons">
+                <div class="icon">
+                    <img src="./pictures/register.jpg" alt="Register Icon">
+                    <p>Register Yourself</p>
+                </div>
+                <div class="icon">
+                    <img src="./pictures/details.png" alt="Information Icon">
+                    <p>Enter Information and Details</p>
+                </div>
+                <div class="icon">
+                    <img src="./pictures/assist.png" alt="Consultation Icon">
+                    <p>Assist through Online and Offline Consultation</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="./signin.html"><button class="signin">Sign In</button></a>
+                <a href="./signin.html"><button class="signup">Sign Up</button></a>
+            </div>
+        </div>
+       
+            <div class="chatbot-section">
+                <div class="chatbot-image">
+                    <img src="./pictures/aichatbot.jpg" alt="Chatbot Icon">
+                </div>
+                <div class="chatbot-content">
+                    <div class="chatbot-text">
+                        <h2>Your Personal AI Assistant</h2>
+                        <p>Hey, I am here to Assist you!</p>
+                    </div>
+                    <div class="chatbot-button-container">
+                        <a href="./chatbot.html"><button class="chatbot-button">AI Assistant</button></a>
+                    </div>
+                </div>
+            </div>
+            
+        
+        </div>
+    </div>
+</body>
+</html>

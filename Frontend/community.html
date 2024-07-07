@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking and Community</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            padding: 20px;
+        }
+        .left-section, .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .left-section video, .right-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .right-section, .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .right-section h1, .left-section h1 {
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
+        }
+        .right-section p, .left-section p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.3s, background-color 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        .explore-section {
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100;
+            background-color: #fff;
+        }
+        .explore-button {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .explore-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        /* Team Section Styles */
+        .team-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #e3f2fd;
+            padding: 20px;
+            text-align: center;
+        }
+        .team-section .heading {
+            margin-top: 20px;
+        }
+        .team-section .heading h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #000;
+        }
+        .team-section .heading p {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .team {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 250px;
+            height: 425px;
+            margin: 10px;
+        }
+        .team-member img {
+            width: 80px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .team-member h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+        }
+        .team-member p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+        }
+        .team-member .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .team-member .social-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .team-member .join-group-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .team-member .join-group-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Sections -->
+    <div class="container">
+        <div class="left-section">
+            <video id="previewVideo1" muted loop>
+                <source src="./video/Basic Banking_ Opening a Bank Account.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="right-section">
+            <h1>Basic Banking: Opening a Bank Account</h1>
+            <p>Opening a bank account is the first step towards financial security. This second module in Basic Banking covers how to open a bank account and how to use it on a regular basis.</p>
+            <button class="button" id="readMoreBtn1">Read More</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="right-section">
+            <video id="previewVideo2" muted loop>
+                <source src="./video/banking explained.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="left-section">
+            <h1>Advanced Banking: Managing Your Account</h1>
+            <p>Learn how to manage your bank account effectively. This module covers everything from monitoring your balance to understanding fees and charges.</p>
+            <button class="button" id="readMoreBtn2">Read More</button>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section">
+        <div class="heading">
+            <h1>Join Community</h1>
+            <p>Connect With Same Minded People.</p>
+        </div>
+        <div class="team">
+            <div class="team-member">
+                <img src="./pictures/share market.jpg" alt="Share Market">
+                <h3>Share Market</h3>
+                <p>Join Community of Share Market Discussion</p>
+                <button class="join-group-button">Join the Group</button>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./pictures/mutual final.jpg" alt="Mutual Funds">
+                <h3>Mutual Funds</h3>
+                <p>Join Community of Mutual Funds Discussion</p>
+                <button class="join-group-button">Join the Group</button>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./pictures/fixed deposite.jpg" alt="Fixed Deposite">
+                <h3>Fixed Deposite</h3>
+                <p>Join Community of Fixed Deposite Discussion</p>
+                <button class="join-group-button">Join the Group</button>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explore More Section -->
+    <section class="explore-section">
+        <button class="explore-button" id="exploreMoreBtn">Explore More</button>
+    </section>
+
+    <!-- Font

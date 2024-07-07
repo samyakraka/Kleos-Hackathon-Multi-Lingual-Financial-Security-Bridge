@@ -1,0 +1,101 @@
+.banner11-container {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.banner11-max-width {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.banner11-container1 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.banner11-title {
+  text-align: center;
+}
+.banner11-text {
+  text-align: center;
+}
+.banner11-ios-btn {
+  gap: var(--dl-space-space-halfunit);
+  fill: white;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-twounits);
+  border-radius: var(--dl-radius-radius-radius8);
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: center;
+  background-color: #000000;
+}
+.banner11-ios-btn:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.banner11-apple {
+  width: 16px;
+  height: 20px;
+}
+.banner11-caption {
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 500;
+}
+.banner11-android-btn {
+  gap: var(--dl-space-space-halfunit);
+  fill: white;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-twounits);
+  border-radius: var(--dl-radius-radius-radius8);
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: center;
+  background-color: #000000;
+}
+.banner11-android-btn:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.banner11-android {
+  width: 18px;
+  height: 20px;
+}
+.banner11-caption1 {
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 500;
+}
+.banner11-root-class-name {
+  background-color: var(--dl-color-theme-neutral-light);
+}
+@media(max-width: 991px) {
+  .banner11-ios-btn {
+    flex: 1;
+  }
+  .banner11-android-btn {
+    flex: 1;
+  }
+}
+@media(max-width: 479px) {
+  .banner11-ios-btn {
+    width: 100%;
+  }
+  .banner11-android-btn {
+    width: 100%;
+  }
+}

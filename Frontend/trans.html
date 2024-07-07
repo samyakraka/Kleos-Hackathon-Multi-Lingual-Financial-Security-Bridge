@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.step {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.step img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.step:hover img {
+    transform: scale(1.1);
+}
+
+.step h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+.step:hover h2 {
+    color: #007bff; /* Change to your desired hover color */
+}
+
+.step p {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.2s ease-in-out;
+}
+
+.step:hover p {
+    color: #444; /* Change to your desired hover color */
+}
+
+
+        .welcome {
+            background-color: #e0e7ff;
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .welcome h1 {
+            font-size: 36px;
+            margin: 0 0 20px;
+            color: #003399;
+        }
+        .welcome p {
+            font-size: 18px;
+            margin: 0 0 30px;
+            color: #666;
+        }
+        .welcome select, .welcome button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .welcome select:hover, .welcome button:hover {
+            background-color: #d1d8ff;
+        }
+        .welcome button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .welcome button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .language-section, .upload-section, .form-section {
+            padding: 50px 20px;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .language-section h2, .upload-section h2, .form-section h2 {
+            font-size: 32px;
+            color: #003399;
+            margin-bottom: 20px;
+        }
+        .language-section select, .upload-section select, .form-section select, .upload-section input[type="file"], .language-section textarea, .form-section textarea {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 8px;
+            width: 80%;
+            transition: background-color 0.3s;
+        }
+        .language-section button, .upload-section button, .form-section button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .language-section button:hover, .upload-section button:hover, .form-section button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .final-button {
+            margin: 20px;
+        }
+        .toast {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .toast button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .toast button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .toast button {
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .steps, .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .step, .language-section, .upload-section, .form-section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="steps">
+            <div class="step">
+                <img src="./pictures/select document.jpg" alt="Select Document">
+                <h2>01</h2>
+                <p>Select Document</p>
+                <p>Choose the document you need to fill and submit.</p>
+            </div>
+            <div class="step">
+                <img src="./pictures/select language.jpg" alt="Fill Information">
+                <h2>02</h2>
+                <p>Fill Information</p>
+                <p>Enter the required information accurately in the selected document.</p>
+            </div>
+            <div class="step">
+                <img src="./pictures/fill document.jpg" alt="Review & Confirm">
+                <h2>03</h2>
+                <p>Review & Confirm</p>
+                <p>Review the filled document carefully and confirm all details are correct.</p>
+            </div>
+            <div class="step">
+                <img src="./pictures/submit document.png" alt="Submit Document">
+                <h2>04</h2>
+                <p>Submit Document</p>
+                <p>Submit the document securely for processing.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+<div class="welcome">
+    <h1>Welcome to our Document Submission Platform</h1>
+    <p>Easily submit your documents in multiple languages with just a few clicks</p>
+    <label for="documents">Select Document:</label>
+    <select id="documents">
+        <option>Create Account</option>
+        <option>KYC</option>
+        <option>Debit Money</option>
+        <option>Credit Money</option>
+    </select>
+</div>
+
+<div class="language-section">
+    <h2>Select The Language</h2>
+    <label for="languages">Language:</label>
+    <select id="languages">
+        <option>Hindi</option>
+        <option>Marathi</option>
+        <option>Tamil</option>
+        <option>Telugu</option>
+    </select>
+    <button>Translate Document</button>
+    <div class="buttons">
+        <button>Text to Text</button>
+        <button>Text to Speech</button>
+    </div>
+    <textarea placeholder="Translated Text will appear here"></textarea>
+</div>
+
+<div class="upload-section">
+    <h2>Upload Document for Translation</h2>
+    <input type="file" id="upload" name="upload">
+    <label for="upload-languages">Translate to Language:</label>
+    <select id="upload-languages">
+        <option>Hindi</option>
+        <option>Marathi</option>
+        <option>Tamil</option>
+        <option>Telugu</option>
+    </select>
+    <button>Upload & Translate</button>
+</div>
+
+<div class="form-section">
+    <h2>Fill the Form</h2>
+    <div class="buttons">
+        <button>Fill by Text</button>
+        <button>Fill by Voice</button>
+    </div>
+    <textarea placeholder="Filled information will appear here"></textarea>
+    <div class="final-button">
+        <button>Final Document</button>
+    </div>
+</div>
+
+<div class="toast">
+    <p>Click the button to submit your final document.</p>
+    <button>Submit</button>
+</div>
+
+</body>
+</html>

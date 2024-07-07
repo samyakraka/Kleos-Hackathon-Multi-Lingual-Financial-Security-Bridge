@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management System</title>
+    <style>
+        /* General styles for full-page sections */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f3f8; /* Light finance blue background */
+            color: #333; /* Dark text color */
+        }
+        .full-height {
+            height: 100%;
+        }
+        .full-width {
+            width: 100%;
+        }
+        /* Section specific styles */
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section1 {
+            background-color: #1c4c80; /* Dark blue background */
+            color: #fff; /* Light text color */
+        }
+        .section2 {
+            background-color: #5a97bf; /* Light finance blue background */
+            color: #333; /* Dark text color */
+        }
+        .form-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #333; /* Dark text color */
+        }
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.2s ease-in-out;
+        }
+        .form-group input[type="file"] {
+            margin-top: 5px;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #5a5af0; /* Darker blue focus color */
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #5a5af0; /* Darker blue button background */
+            color: #fff; /* Light button text color */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .form-group button:hover {
+            background-color: #4646d1; /* Slightly darker blue on hover */
+        }
+        .forms-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: calc(100vh - 100px); /* Adjust as needed */
+        }
+        .form-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-item h3 {
+            margin-top: 0;
+            color: #1c4c80; /* Dark blue heading color */
+        }
+        .form-item p {
+            margin-bottom: 5px;
+            color: #333; /* Dark text color */
+        }
+        .form-item a {
+            color: #5a5af0; /* Darker blue link color */
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .form-item a:hover {
+            color: #4646d1; /* Slightly darker blue link color on hover */
+        }
+    </style>
+</head>
+<body>
+    <section class="section section1 full-height">
+        <div class="form-container">
+            <h2>Add Document Template</h2>
+            <form id="documentForm" class="document-form">
+                <div class="form-group">
+                    <label for="documentType">Document Type:</label>
+                    <input type="text" id="documentType" name="documentType" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="institutionName">Institution Name:</label>
+                    <input type="text" id="institutionName" name="institutionName" required>
+                </div>
+                <div class="form-group">
+                    <label for="supplementaryDocuments">Required Supplementary Documents:</label>
+                    <input type="text" id="supplementaryDocuments" name="supplementaryDocuments" required>
+                </div>
+                <div class="form-group">
+                    <label for="documentTemplate">Upload Document Template:</label>
+                    <input type="file" id="documentTemplate" name="documentTemplate" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.txt" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <section class="section section2 full-height">
+        <div class="forms-container">
+            <h2>Received Filled Forms</h2>
+            <div class="form-item">
+                <h3>Form Submission #1</h3>
+                <p><strong>Document Type:</strong> Admission Form</p>
+                <p><strong>Institution Name:</strong> Example University</p>
+                <p><strong>Submitted By:</strong> John Doe (john.doe@example.com)</p>
+                <p><strong>Date:</strong> June 19, 2024</p>
+                <p><a href="#">Download Submission</a></p>
+            </div>
+            <div class="form-item">
+                <h3>Form Submission #2</h3>
+                <p><strong>Document Type:</strong> Enrollment Form</p>
+                <p><strong>Institution Name:</strong> Sample College</p>
+                <p><strong>Submitted By:</strong> Jane Smith (jane.smith@example.com)</p>
+                <p><strong>Date:</strong> June 18, 2024</p>
+                <p><a href="#">Download Submission</a></p>
+            </div>
+            <!-- Add more form items dynamically here -->
+        </div>
+    </section>
+</body>
+</html>

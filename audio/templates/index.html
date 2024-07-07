@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #record {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            min-height: 50px;
+        }
+        #process {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speech to Text Conversion</h1>
+    <p>Click the "Record" button to start recording.</p>
+    <button id="record">Record</button>
+    <button id="process">Process</button>
+    <div id="result"></div>
+
+    <script>
+        $(function() {
+            var recognition = new webkitSpeechRecognition();
+            var audioData = null;
+
+            $('#record').click(function() {
+                recognition.onresult = function(event) {
+                    var result = event.results[0][0].transcript;
+                    $('#result').text(result);
+                    audioData = result; // Store recorded audio for processing
+                    $('#process').show(); // Show process button after recording
+                };
+
+                recognition.start();
+            });
+
+            $('#process').click(function() {
+                if (audioData) {
+                    var formData = new FormData();
+                    formData.append('audio', audioData);
+
+                    $.ajax({
+                        url: '/process-audio',
+                        type: 'POST',
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            $('#result').text(response.text);
+                        },
+                        error: function(error) {
+                            console.log('Error:', error);
+                            $('#result').text('Error occurred during speech recognition.');
+                        }
+                    });
+                } else {
+                    $('#result').text('No audio recorded.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

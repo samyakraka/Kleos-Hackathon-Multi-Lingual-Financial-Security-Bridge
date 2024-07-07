@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Processor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px; /* Adjust as needed */
+            margin: 0 auto;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .step {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .step img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .step:hover img {
+            transform: scale(1.1);
+        }
+
+        .step h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .step:hover h2 {
+            color: #007bff; /* Change to your desired hover color */
+        }
+
+        .step p {
+            font-size: 16px;
+            color: #666;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .step:hover p {
+            color: #444; /* Change to your desired hover color */
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #a8dadc;
+            padding: 20px;
+            border-radius: 10px;
+            border-color: #000000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #000000; /* Changed to black */
+            font-weight: bold;
+        }
+
+        input[type="file"], input[type="text"], select {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #a8dadc;
+            background-color: white;
+            border-radius: 8px;
+            width: 600px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="file"]{
+            width: 580px;
+        }
+        input[type="file"]:focus, input[type="text"]:focus, select:focus {
+            border-color: #457b9d;
+            outline: none;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #ffc300;
+            color: #001d3d;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffd700;
+            color: #000814;
+        }
+
+        .error {
+            color: #e63946;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .text-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .extracted-text, .translated-text {
+            width: 48%;
+            background-color: #a2d2ff;
+            padding: 20px;
+            border-radius: 0 px;
+            text-align: center;
+            border-width: 3px;
+            border-color: #e9edc9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            color: black;
+        }
+
+        .download-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .download-link h2{
+            color: black;
+        }
+
+        .download-link a{
+            color: black;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="steps">
+            <div class="step">
+                <img src="/Frontend/pictures/select document.jpg" alt="Select Document">
+                <h2>01</h2>
+                <p>Select Document</p>
+                <p>Choose the document you need to fill and submit.</p>
+            </div>
+            <div class="step">
+                <img src="/Frontend/pictures/select language.jpg" alt="Fill Information">
+                <h2>02</h2>
+                <p>Fill Information</p>
+                <p>Enter the required information accurately in the selected document.</p>
+            </div>
+            <div class="step">
+                <img src="/Frontend/pictures/fill document.jpg" alt="Review & Confirm">
+                <h2>03</h2>
+                <p>Review & Confirm</p>
+                <p>Review the filled document carefully and confirm all details are correct.</p>
+            </div>
+            <div class="step">
+                <img src="/Frontend/pictures/submit document.png" alt="Submit Document">
+                <h2>04</h2>
+                <p>Submit Document</p>
+                <p>Submit the document securely for processing.</p>
+            </div>
+        </div>
+    </div>
+    <h1>Document Processor</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file">Upload file:</label>
+        <input type="file" name="file" id="file" required><br><br>
+        
+        <label for="language">Target Language:</label>
+        <select name="language" id="language" required>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="mr">Marathi</option>
+            <option value="te">Telugu</option>
+            <option value="ta">Tamil</option>
+            <option value="bn">Bengali</option>
+        </select><br><br>
+        
+        <div class="button-container">
+            <button type="submit">Process</button>
+        </div>
+    </form>
+
+    {% if error %}
+        <h2 class="error">{{ error }}</h2>
+    {% endif %}
+
+    <div class="text-container">
+        {% if extracted_text %}
+            <div class="extracted-text">
+                <h2>Extracted Text:</h2>
+                <pre>{{ extracted_text }}</pre>
+            </div>
+        {% endif %}
+
+        {% if translated_text %}
+            <div class="translated-text">
+                <h2>Translated Text:</h2>
+                <pre>{{ translated_text }}</pre>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if tts_output_path %}
+        <div class="download-link">
+            <h2>Download Translated Speech:</h2>
+            <a href="{{ url_for('download_file', filename='translated_speech.mp3') }}">Download MP3</a>
+        </div>
+    {% endif %}
+
+    <h1>Speech to Text Conversion</h1>
+    <p>Click the "Record" button to start recording.</p>
+    <button id="record">Record</button>
+    <button id="stop" style="display: none;">Stop</button>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function () {
+            let mediaRecorder;
+            let audioChunks = [];
+
+            $('#record').click(function () {
+                navigator.mediaDevices.getUserMedia({ audio: true })
+                    .then(stream => {
+                        mediaRecorder = new MediaRecorder(stream);
+                        mediaRecorder.start();
+
+                        mediaRecorder.ondataavailable = function (event) {
+                            audioChunks.push(event.data);
+                        };
+
+                        mediaRecorder.onstop = function () {
+                            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                            const formData = new FormData();
+                            formData.append('audio', audioBlob, 'recording.wav');
+
+                            $.ajax({
+                                url: '/transcribe_audio',
+                                method: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function (response) {
+                                    $('#result').html('<pre>' + response.transcription + '</pre>');
+                                },
+                                error: function (error) {
+                                    console.error('Error:', error);
+                                }
+                            });
+
+                            audioChunks = [];
+                        };
+
+                        $('#record').hide();
+                        $('#stop').show();
+                    })
+                    .catch(error => console.error('Error accessing media devices.', error));
+            });
+
+            $('#stop').click(function () {
+                mediaRecorder.stop();
+                $('#record').show();
+                $('#stop').hide();
+            });
+        });
+    </script>
+</body>
+</html>
